@@ -29,10 +29,10 @@ public class LevelEditorManager : MonoBehaviour
             Debug.Log("World Position :" + worldPosition);
         } else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            //Touch touch = in
+            Touch touch = Input.GetTouch(0);
             InvetoryButtons[CurrentButtonPressed].clicked = false;
             //Add new object to the screen where the mouse is
-            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(worldPosition.x, worldPosition.y, 0), Quaternion.identity);
+            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(touch.position.x, touch.position.y, 0), Quaternion.identity);
             Debug.Log("screenPosition.x:" + screenPosition.x);
             Debug.Log("screenPosition.y:" + screenPosition.y);
             Debug.Log("screenPosition.z:" + screenPosition.z);
