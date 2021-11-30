@@ -1,9 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ButtonItemController
     - FollowScript
-    - InventoryScript
     - ItemController
     - LevelEditorManager
     Unity.Rider.Editor.dll:
@@ -25,7 +23,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -84,10 +81,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3134}
     - Class: 114
-      Script: {instanceID: 3406}
-    - Class: 114
-      Script: {instanceID: 3658}
-    - Class: 114
       Script: {instanceID: 3738}
     - Class: 114
       Script: {instanceID: 3850}
@@ -95,8 +88,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4118}
     - Class: 114
       Script: {instanceID: 4328}
-    - Class: 114
-      Script: {instanceID: 4468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
