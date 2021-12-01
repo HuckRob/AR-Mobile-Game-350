@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class LevelEditorManager : MonoBehaviour
 {
@@ -8,6 +10,13 @@ public class LevelEditorManager : MonoBehaviour
     public GameObject[] ItemPrefabs;
     public GameObject[] ItemImage;
     public int CurrentButtonPressed; //Item ID of pressed button
+    private TextMeshProUGUI debugScreenText;
+
+    private void Start()
+    {
+        debugScreenText = GameObject.FindGameObjectWithTag("DebugTextOnScreen").GetComponent<TextMeshProUGUI>();
+        debugScreenText.text = "";
+    }
 
     private void Update()
     {
@@ -17,12 +26,13 @@ public class LevelEditorManager : MonoBehaviour
         //Find the mouse position relative to the world
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
 
+
         //When GetMouseButtonDown is  0 it's left click and 1 is right click
         if (Input.GetMouseButtonDown(0) && InvetoryButtons[CurrentButtonPressed].clicked)
         {
             InvetoryButtons[CurrentButtonPressed].clicked = false;
             //Add new object to the screen where the mouse is
-            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(worldPosition.x, worldPosition.y, 0), Quaternion.identity);
+            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector2(worldPosition.x, worldPosition.y), Quaternion.identity);
             Debug.Log("screenPosition.x:" + screenPosition.x);
             Debug.Log("screenPosition.y:" + screenPosition.y);
             Debug.Log("screenPosition.z:" + screenPosition.z);
@@ -30,13 +40,11 @@ public class LevelEditorManager : MonoBehaviour
         } else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             Touch touch = Input.GetTouch(0);
-            InvetoryButtons[CurrentButtonPressed].clicked = false;
             //Add new object to the screen where the mouse is
-            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(touch.position.x, touch.position.y, 0), Quaternion.identity);
-            Debug.Log("screenPosition.x:" + screenPosition.x);
-            Debug.Log("screenPosition.y:" + screenPosition.y);
-            Debug.Log("screenPosition.z:" + screenPosition.z);
-            Debug.Log("World Position :" + worldPosition);
+            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector2(Mathf.Floor(touch.position.x), Mathf.Floor(touch.position.y)), Quaternion.identity);
+
+            debugScreenText.text = ("Touch Position" + touch.position +  "\n Touch Position.x:" + touch.position.x + "\n Touch Position.y:" + touch.position.y);
+            InvetoryButtons[CurrentButtonPressed].clicked = false;
         }
     }
 

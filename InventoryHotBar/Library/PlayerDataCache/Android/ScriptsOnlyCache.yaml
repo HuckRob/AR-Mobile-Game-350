@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AnimationScript
     - FollowScript
     - ItemController
     - LevelEditorManager
@@ -88,6 +89,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4118}
     - Class: 114
       Script: {instanceID: 4328}
+    - Class: 114
+      Script: {instanceID: 24034}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -761,6 +764,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
+  - hash:
+      serializedVersion: 2
+      Hash: b3b88a83977f0095ee5fd9765e4de1e8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AnimationScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
