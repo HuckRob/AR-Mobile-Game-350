@@ -70,27 +70,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2028}
     - Class: 114
-      Script: {instanceID: 2326}
+      Script: {instanceID: 2236}
     - Class: 114
-      Script: {instanceID: 2442}
+      Script: {instanceID: 2328}
     - Class: 114
-      Script: {instanceID: 2484}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2792}
+      Script: {instanceID: 2486}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2794}
     - Class: 114
-      Script: {instanceID: 3134}
+      Script: {instanceID: 2882}
     - Class: 114
-      Script: {instanceID: 3738}
+      Script: {instanceID: 3136}
     - Class: 114
-      Script: {instanceID: 3850}
+      Script: {instanceID: 3740}
     - Class: 114
-      Script: {instanceID: 4118}
+      Script: {instanceID: 3852}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4120}
     - Class: 114
-      Script: {instanceID: 24034}
+      Script: {instanceID: 4330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -248,6 +248,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: b3b88a83977f0095ee5fd9765e4de1e8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AnimationScript
   - hash:
       serializedVersion: 2
       Hash: 4f60ff347d4efee4ef8cc7f627735018
@@ -764,12 +770,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
-  - hash:
-      serializedVersion: 2
-      Hash: b3b88a83977f0095ee5fd9765e4de1e8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AnimationScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
