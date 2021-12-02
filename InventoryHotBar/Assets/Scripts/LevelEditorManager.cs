@@ -41,8 +41,10 @@ public class LevelEditorManager : MonoBehaviour
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             Touch touch = Input.GetTouch(0);
+            Vector3 touchPosition = new Vector3(touch.position.x, touch.position.y, 150f);
+            Vector3 touchCords = Camera.main.ScreenToWorldPoint(touchPosition);
             //Add new object to the screen where the mouse is
-            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(Mathf.Floor(touch.position.x), Mathf.Floor(touch.position.y), 1), Quaternion.identity);
+            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(touchCords.x, touchCords.y, 1), Quaternion.identity);
 
             debugScreenText.text = ("Touch Position" + touch.position +  "\n Touch Position.x:" + touch.position.x + "\n Touch Position.y:" + touch.position.y);
             InvetoryButtons[CurrentButtonPressed].clicked = false;
