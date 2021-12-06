@@ -31,20 +31,20 @@ public class LevelEditorManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && InvetoryButtons[CurrentButtonPressed].clicked)
         {
             //Add new object to the screen where the mouse is
-            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(worldPosition.x, worldPosition.y, worldPosition.z), Quaternion.identity);
+            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(worldPosition.x, worldPosition.y, (worldPosition.z - 10)), Quaternion.identity);
             Debug.Log("screenPosition.x:" + screenPosition.x);
             Debug.Log("screenPosition.y:" + screenPosition.y);
             Debug.Log("screenPosition.z:" + screenPosition.z);
             Debug.Log("World Position :" + worldPosition);
             InvetoryButtons[CurrentButtonPressed].clicked = false;
         } 
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && InvetoryButtons[CurrentButtonPressed].clicked)
         {
             Touch touch = Input.GetTouch(0);
             Vector3 touchPosition = new Vector3(touch.position.x, touch.position.y, 100f);
             Vector3 touchCords = Camera.main.ScreenToWorldPoint(touchPosition);
             //Add new object to the screen where the mouse is
-            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(touchCords.x, touchCords.y, 1), Quaternion.identity);
+            Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(touchCords.x, touchCords.y, (worldPosition.z-10)), Quaternion.identity);
 
             //debugScreenText.text = ("Touch Position" + touch.position +  "\n Touch Position.x:" + touch.position.x + "\n Touch Position.y:" + touch.position.y);
             InvetoryButtons[CurrentButtonPressed].clicked = false;

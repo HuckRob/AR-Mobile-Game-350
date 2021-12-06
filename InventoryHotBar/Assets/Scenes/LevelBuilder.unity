@@ -796,8 +796,22 @@ MonoBehaviour:
   - {fileID: 1236185859}
   ItemPrefabs:
   - {fileID: 3519170501268143619, guid: 9da09c1644ca8b84da8d442f31a24950, type: 3}
+  - {fileID: 178996, guid: 4cc487e002327cb43995ca1871bd142e, type: 3}
+  - {fileID: 134746, guid: d4f06407f06d8cf41b643015132cafca, type: 3}
+  - {fileID: 1452582699982370, guid: 7669d0a6127c67c4aa1a9959540ec798, type: 3}
+  - {fileID: 1130628688242790, guid: 63656ca5180e1654f9b4059b3ee8be33, type: 3}
+  - {fileID: 1248381476518802, guid: c8f22cd267afe014f85ca7378daf6559, type: 3}
+  - {fileID: 1854251442307996, guid: 395e79ecbbe291e4780049df9fba6949, type: 3}
+  - {fileID: 1902067928624528, guid: f14a0998d181cb949b0ff9e711194bbe, type: 3}
   ItemImage:
   - {fileID: 1510385675482294907, guid: 841f758a121084441880a29d3f6925b1, type: 3}
+  - {fileID: 178996, guid: 4cc487e002327cb43995ca1871bd142e, type: 3}
+  - {fileID: 134746, guid: d4f06407f06d8cf41b643015132cafca, type: 3}
+  - {fileID: 1452582699982370, guid: 7669d0a6127c67c4aa1a9959540ec798, type: 3}
+  - {fileID: 1130628688242790, guid: 63656ca5180e1654f9b4059b3ee8be33, type: 3}
+  - {fileID: 1248381476518802, guid: c8f22cd267afe014f85ca7378daf6559, type: 3}
+  - {fileID: 1854251442307996, guid: 395e79ecbbe291e4780049df9fba6949, type: 3}
+  - {fileID: 1902067928624528, guid: f14a0998d181cb949b0ff9e711194bbe, type: 3}
   CurrentButtonPressed: 0
 --- !u!1001 &1156006526
 PrefabInstance:
