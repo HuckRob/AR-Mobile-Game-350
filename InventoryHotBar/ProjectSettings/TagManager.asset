@@ -8,6 +8,7 @@ TagManager:
   - ItemImage
   - Debug
   - DebugTextOnScreen
+  - StartScreen
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1639833471
     locked: 0
