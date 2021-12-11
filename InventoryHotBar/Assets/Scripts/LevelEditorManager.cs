@@ -15,8 +15,8 @@ public class LevelEditorManager : MonoBehaviour
 
     private void Start()
     {
-        debugScreenText = GameObject.FindGameObjectWithTag("DebugTextOnScreen").GetComponent<TextMeshProUGUI>();
-        debugScreenText.text = "";
+        //debugScreenText = GameObject.FindGameObjectWithTag("DebugTextOnScreen").GetComponent<TextMeshProUGUI>();
+        //debugScreenText.text = "";
     }
 
     private void Update()
@@ -40,7 +40,7 @@ public class LevelEditorManager : MonoBehaviour
                 Debug.Log("World Position :" + worldPosition);
                 InvetoryButtons[CurrentButtonPressed].clicked = false;
             }
-            else if(currentPlayerPrefab.Length == 0)
+            /*else if(currentPlayerPrefab.Length == 0)
             {
                 currentPlayerPrefab[0].push(ItemPrefabs[CurrentButtonPressed]);
                 Instantiate(currentPlayerPrefab[0], new Vector3(worldPosition.x, worldPosition.y, (worldPosition.z - 10)), Quaternion.identity);
@@ -49,7 +49,7 @@ public class LevelEditorManager : MonoBehaviour
                 Destroy(currentPlayerPrefab[0]);
                 currentPlayerPrefab[0] = ItemPrefabs[CurrentButtonPressed];
                 Instantiate(currentPlayerPrefab[0], new Vector3(worldPosition.x, worldPosition.y, (worldPosition.z - 10)), Quaternion.identity);
-            }
+            }*/
         } 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && InvetoryButtons[CurrentButtonPressed].clicked)
         {

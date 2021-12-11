@@ -9,6 +9,8 @@ TagManager:
   - Debug
   - DebugTextOnScreen
   - StartScreen
+  - Ground
+  - Joystick
   layers:
   - Default
   - TransparentFX
